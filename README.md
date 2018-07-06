@@ -9,3 +9,9 @@
 #2.
     Example Practice
     
+    
+## Reference
+  > 유동환님 저자의 RxJava 프로그래밍
+  
+  (유동환님의 허락 하에 일부 내용 정리중...)
+  [LenKIM_TIL](https://github.com/LenKIM/TIL_Today_I_Learned/tree/master/FP(FunctionalProgramming)/RxJAVA)
