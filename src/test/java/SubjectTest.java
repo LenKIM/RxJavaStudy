@@ -1,4 +1,5 @@
 import io.reactivex.observers.TestObserver;
+import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.AsyncSubject;
 import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.PublishSubject;
@@ -62,13 +63,12 @@ public class SubjectTest {
         tester.assertResult("1", "3", "5")
                 .assertTerminated()
                 .assertNoErrors();
-
     }
 
     @Test
     public void ReplaySubject() {
         TestObserver<String> tester = new TestObserver<>();
-
+        Schedulers.trampoline()
         ReplaySubject<String> subject = ReplaySubject.create();
         subject.subscribe(tester);
         subject.subscribe(data -> System.out.println("Subscriber #1 => " + data));

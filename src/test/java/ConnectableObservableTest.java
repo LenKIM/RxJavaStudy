@@ -32,7 +32,7 @@ public class ConnectableObservableTest {
         source.subscribe(data -> System.out.println("Subscriber #3 => " + data));
         Thread.sleep(100);
 
-        tester.assertResult("1","3","5");
+        tester.assertResult("1", "3", "5");
 
     }
 }
